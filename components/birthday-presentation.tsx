@@ -4,16 +4,16 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Gift, Leaf } from "lucide-react"
 
 const photoCaptions = [
-  "Gracias por las risas",
-  "Momentos inolvidables",
-  "Siempre en mi corazón",
-  "Las mejores aventuras",
-  "Explorando juntos",
-  "Noches de música y alegría",
+  "Gracias por todas las risas",
+  "Por los momentos espectaculares",
+  "Y por todo lo que me enseñas",
+  "Por las mejores aventuras",
+  "¡Gracias por ser mi amiga! 🥹",
+  "Con vos nunca faltan las risas",
   "Arte y buena compañía",
-  "Pizza y risas",
+  "Pizza y más risas",
   "Siempre buscando aventura",
-  "Momentos mágicos"
+  "Y regalando momentos mágicos"
 ]
 
 const photoModules = import.meta.glob<string>("@/src/img/*.jpg", {
@@ -144,7 +144,7 @@ function EntryGate({ onStart }: { onStart: () => void }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          Tienes un regalo especial
+          Tenés un regalo especial
         </motion.h1>
         
         <motion.p 
@@ -182,7 +182,7 @@ function IntroSlide() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl font-bold text-white mb-4 text-balance leading-tight">
-            ¡Por una amistad bonita y momentos geniales!
+            ¡Por esta amistad tan bonita y momentos geniales!
           </h2>
           <div className="flex justify-center gap-2 text-4xl">
             <motion.span
@@ -233,8 +233,8 @@ function PhotoSlide({ photo, index }: { photo: typeof photos[0]; index: number }
       
       {/* Caption */}
       <motion.div 
-        className="absolute bottom-0 left-0 right-0 p-6"
-        initial={{ opacity: 0, y: 50 }}
+        className="absolute top-20 left-0 right-0 p-6"
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
@@ -267,7 +267,7 @@ function Exotic1Slide() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-2xl text-white leading-relaxed">
-            {`A veces me dicen: "qué personaje tan exótico"...`}
+            {`¿No serás vos el Pokémon más mítico de todos?"...`}
           </p>
           <motion.span 
             className="inline-block mt-4 text-4xl"
@@ -338,7 +338,7 @@ function MessageSlide() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Aunque en este momento no estemos cerca o seamos como uña y mugre, te guardo un espaciecito de mucho cariño...
+            Aunque ahora no estemos cerca, siempre te recuerdo con muchísimo cariño...
           </motion.p>
           <motion.span 
             className="inline-block mt-6 text-4xl"
@@ -346,7 +346,7 @@ function MessageSlide() {
             animate={{ scale: 1 }}
             transition={{ delay: 0.8, type: "spring" }}
           >
-            💚
+            💛💛💛
           </motion.span>
         </motion.div>
       </GlassCard>
@@ -432,12 +432,12 @@ function SpotifyPlayer({ visible }: { visible: boolean }) {
   
   return (
     <motion.div
-      className="fixed top-16 left-4 right-4 z-20 md:top-auto md:bottom-6 md:left-auto md:right-6 md:w-80"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      className="fixed bottom-4 left-4 right-4 z-20 opacity-40 transition-opacity duration-300 hover:opacity-100 focus-within:opacity-100 md:bottom-6 md:left-auto md:right-6 md:w-80"
+      initial={{ y: 50 }}
+      animate={{ y: 0 }}
       transition={{ delay: 1, duration: 0.5 }}
     >
-      <div className="h-20 md:h-[152px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl overflow-hidden shadow-2xl">
+      <div className="h-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl overflow-hidden shadow-2xl">
         <iframe
           src="https://open.spotify.com/embed/track/57NbelD7NoWpb6dXVcOEbM?utm_source=generator&theme=0"
           width="100%"
