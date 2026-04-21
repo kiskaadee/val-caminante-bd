@@ -246,7 +246,7 @@ function PhotoSlide({ photo, index }: { photo: typeof photos[0]; index: number }
       </motion.div>
       
       {/* Photo counter */}
-      <div className="absolute top-6 right-6">
+      <div className="absolute top-2 right-3 md:top-6 md:right-6">
         <GlassCard className="px-3 py-1">
           <span className="text-sm text-white/90 font-medium">
             {index + 1} / {photos.length}
@@ -432,20 +432,20 @@ function SpotifyPlayer({ visible }: { visible: boolean }) {
   
   return (
     <motion.div
-      className="fixed bottom-6 left-6 right-6 z-40 md:left-auto md:right-6 md:w-80"
+      className="fixed top-16 left-4 right-4 z-20 md:top-auto md:bottom-6 md:left-auto md:right-6 md:w-80"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: 0.5 }}
     >
-      <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl overflow-hidden shadow-2xl">
+      <div className="h-20 md:h-[152px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl overflow-hidden shadow-2xl">
         <iframe
           src="https://open.spotify.com/embed/track/57NbelD7NoWpb6dXVcOEbM?utm_source=generator&theme=0"
           width="100%"
-          height="152"
+          height="80"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
-          className="rounded-xl"
+          className="h-full rounded-xl"
         />
       </div>
     </motion.div>
